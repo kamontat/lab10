@@ -36,6 +36,7 @@
         <properties>
           <font size="24"/>
           <text value="Status Of Coin"/>
+          <verifyInputWhenFocusTarget value="true"/>
         </properties>
       </component>
     </children>

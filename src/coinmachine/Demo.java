@@ -1,5 +1,6 @@
 package coinmachine;
 
+import Constant.Status;
 import GUI.ShowCoin;
 
 import java.util.Scanner;
