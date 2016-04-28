@@ -6,23 +6,21 @@ public class ShowCoin extends JDialog {
 	private JPanel contentPane;
 	private JLabel message;
 	private JTextField textField1;
+	private JLabel status;
 	private JButton buttonOK;
 
 	public ShowCoin() {
 		setContentPane(contentPane);
-		setModal(true);
 
+		textField1.setEnabled(false);
+	}
 
+	public void setTextField(String text) {
+		textField1.setText(text);
 	}
 
 	public void run() {
 		pack();
 		setVisible(true);
-		System.exit(0);
-	}
-
-	public static void main(String[] args) {
-		ShowCoin dialog = new ShowCoin();
-		dialog.run();
 	}
 }
