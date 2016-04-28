@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="7fa7c" class="javax.swing.JLabel" binding="message1">
+      <component id="7fa7c" class="javax.swing.JLabel">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -16,15 +16,15 @@
           <text value="Balance: "/>
         </properties>
       </component>
-      <component id="a12ec" class="javax.swing.JLabel">
+      <component id="a12ec" class="javax.swing.JLabel" binding="balance">
         <constraints>
-          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="0"/>
         </properties>
       </component>
-      <component id="1af42" class="javax.swing.JLabel" binding="message2">
+      <component id="1af42" class="javax.swing.JLabel">
         <constraints>
           <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -42,7 +42,7 @@
           <stringPainted value="true"/>
         </properties>
       </component>
-      <component id="11b16" class="javax.swing.JLabel" binding="message3">
+      <component id="11b16" class="javax.swing.JLabel">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>

@@ -7,7 +7,6 @@ import java.awt.*;
 
 public class CoinWindow extends JDialog {
 	private JPanel contentPane;
-	private JLabel message;
 	private JTextField textField1;
 	private JLabel status;
 
