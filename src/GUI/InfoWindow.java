@@ -14,7 +14,9 @@ public class InfoWindow extends JDialog {
 	private JButton fiveBahtButton;
 	private JLabel balance;
 
-	public InfoWindow(CoinMachine machine) {
+	private CoinMachine machine;
+
+	public InfoWindow() {
 		setContentPane(contentPane);
 
 		oneBahtButton.addActionListener(new ActionListener() {
@@ -35,6 +37,10 @@ public class InfoWindow extends JDialog {
 				machine.insert(new Coin(10));
 			}
 		});
+	}
+
+	public void setMachine(CoinMachine machine) {
+		this.machine = machine;
 	}
 
 	public void setBalance(String balance) {

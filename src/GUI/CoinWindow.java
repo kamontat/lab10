@@ -12,7 +12,9 @@ public class CoinWindow extends JDialog {
 
 	public CoinWindow() {
 		setContentPane(contentPane);
+		// set up
 		textField1.setEnabled(false);
+		updateStatus(Status.REJECT);
 	}
 
 	public void setTextField(String text) {

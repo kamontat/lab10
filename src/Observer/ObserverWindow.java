@@ -11,28 +11,28 @@ import java.util.*;
  * Created by kamontat on 28/4/59.
  */
 public class ObserverWindow implements Observer {
-	private CoinWindow dialog1 = new CoinWindow();
-	private InfoWindow dialog2 = new InfoWindow();
+	private CoinWindow coinDialog = new CoinWindow();
+	private InfoWindow infoDialog = new InfoWindow();
 
 	public ObserverWindow() {
-		dialog1.updateStatus(Status.REJECT);
-		dialog1.run();
-
-		dialog2.run();
+		coinDialog.run();
+		infoDialog.run();
 	}
 
 	@Override
 	public void update(Observable o, Object arg) {
 		if (o != null) {
 			CoinMachine machine = (CoinMachine) o;
-			dialog1.setTextField(String.valueOf(machine.getCount()));
-			if (!machine.isFull()) {
-				dialog1.updateStatus(Status.ACCEPT);
+			infoDialog.setMachine(machine);
 
-				dialog2.setBalance(String.valueOf(machine.getBalance()));
-				dialog2.setProgressBar(machine.getCount());
+			coinDialog.setTextField(String.valueOf(machine.getCount()));
+			infoDialog.setBalance(String.valueOf(machine.getBalance()));
+			infoDialog.setProgressBar(machine.getCount());
+
+			if (!machine.isFull()) {
+				coinDialog.updateStatus(Status.ACCEPT);
 			} else {
-				dialog1.updateStatus(Status.FULL);
+				coinDialog.updateStatus(Status.FULL);
 			}
 		}
 	}
