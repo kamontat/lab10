@@ -3,7 +3,7 @@ package GUI;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class AllInfo extends JDialog {
+public class InfoWindow extends JDialog {
 	private JPanel contentPane;
 	private JLabel message1;
 	private JLabel message2;
@@ -13,9 +13,8 @@ public class AllInfo extends JDialog {
 	private JButton button2;
 	private JButton button3;
 
-	public AllInfo() {
+	public InfoWindow() {
 		setContentPane(contentPane);
-
 	}
 
 	public void run() {

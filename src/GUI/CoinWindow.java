@@ -5,15 +5,14 @@ import Constant.Status;
 import javax.swing.*;
 import java.awt.*;
 
-public class ShowCoin extends JDialog {
+public class CoinWindow extends JDialog {
 	private JPanel contentPane;
 	private JLabel message;
 	private JTextField textField1;
 	private JLabel status;
 
-	public ShowCoin() {
+	public CoinWindow() {
 		setContentPane(contentPane);
-
 		textField1.setEnabled(false);
 	}
 
@@ -27,6 +26,9 @@ public class ShowCoin extends JDialog {
 			this.status.setForeground(new Color(0, 255, 0, 255));
 		} else if (status == Status.REJECT) {
 			this.status.setText("Reject Coin");
+			this.status.setForeground(new Color(255, 170, 0, 255));
+		} else if (status == Status.FULL) {
+			this.status.setText("Machine FULL");
 			this.status.setForeground(new Color(255, 0, 0, 255));
 		}
 	}

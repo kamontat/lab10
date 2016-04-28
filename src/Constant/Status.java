@@ -5,5 +5,6 @@ package Constant;
  */
 public enum Status {
 	ACCEPT,
-	REJECT;
+	REJECT,
+	FULL;
 }
