@@ -16,31 +16,47 @@ public class InfoWindow extends JDialog {
 
 	private CoinMachine machine;
 
-	public InfoWindow() {
+	public InfoWindow(CoinMachine machine) {
+		this.machine = machine;
+
 		setContentPane(contentPane);
+
+		progressBar1.setMaximum(machine.getCapacity());
 
 		oneBahtButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				machine.insert(new Coin(1));
+				insert(1);
 			}
 		});
 		fiveBahtButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				machine.insert(new Coin(5));
+				insert(5);
 			}
 		});
 		tenBahtButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				machine.insert(new Coin(10));
+				insert(10);
 			}
 		});
 	}
 
-	public void setMachine(CoinMachine machine) {
-		this.machine = machine;
+	/**
+	 * insert coin to machine,
+	 * If coin is full return Error pop-up
+	 *
+	 * @param num
+	 * 		Which coin to insert
+	 */
+	public void insert(int num) {
+		if (machine != null) {
+			machine.insert(new Coin(num));
+			if (machine.isFull()) {
+				JOptionPane.showMessageDialog(null, "The machine is FULL", "Error input Coin", JOptionPane.ERROR_MESSAGE);
+			}
+		}
 	}
 
 	public void setBalance(String balance) {
@@ -54,6 +70,9 @@ public class InfoWindow extends JDialog {
 		pack();
 	}
 
+	/**
+	 * run this GUI
+	 */
 	public void run() {
 		pack();
 		setLocation(0, 175);

@@ -21,6 +21,13 @@ public class CoinWindow extends JDialog {
 		textField1.setText(text);
 	}
 
+	/**
+	 * update status label with *status* enum
+	 * and set color in every state
+	 *
+	 * @param status
+	 * 		state enum
+	 */
 	public void updateStatus(Status status) {
 		if (status == Status.ACCEPT) {
 			this.status.setText("Accepting Coins");
@@ -34,6 +41,9 @@ public class CoinWindow extends JDialog {
 		}
 	}
 
+	/**
+	 * run this GUI
+	 */
 	public void run() {
 		pack();
 		setVisible(true);

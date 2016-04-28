@@ -22,10 +22,13 @@ public class CoinMachine extends Observable {
 	
 	/**
 	 * Create a new coin machine with a fixed capacity.
+	 *
+	 * @param capacity
+	 * 		the capacity of machine
 	 */
 	public CoinMachine(int capacity) {
 		this.capacity = capacity;
-		coins = new java.util.ArrayList<Coin>();
+		coins = new java.util.ArrayList<>();
 	}
 
 	/**
@@ -66,7 +69,8 @@ public class CoinMachine extends Observable {
 	 * @param m
 	 * 		is a coin object to insert. Must not be null.
 	 * @return true if coins successfully added, false if failure (machine full)
-	 * @throws
+	 * @throws IllegalArgumentException
+	 * 		Coin value must be position number
 	 */
 	public boolean insert(Coin m) {
 		if (isFull()) return false;

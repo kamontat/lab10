@@ -11,11 +11,11 @@ public class Coin implements Comparable<Coin> {
 	private final String currency;
 
 	/**
-	 * Initialize a new Coin.
+	 * Initialize a new Coin. <br>
+	 * <i>assume</i> the value is <b>positive</b>
 	 *
 	 * @param value
 	 * 		is the value of the Coin
-	 * @pre the value is positive
 	 */
 	public Coin(int value) {
 		this(value, "Baht");
@@ -91,8 +91,11 @@ public class Coin implements Comparable<Coin> {
 	}
 
 	/**
+	 * don't use.
+	 *
 	 * @param o
-	 * @return
+	 * 		some object
+	 * @return some number
 	 */
 	@Override
 	public int compareTo(Coin o) {

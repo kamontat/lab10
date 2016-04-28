@@ -9,13 +9,16 @@ import java.util.Scanner;
  *
  * @author James Brucker
  */
-public class Demo {
+public class Main {
 	// create a java.util.Scanner object for use in all methods
 	private static Scanner console = new Scanner(System.in);
 	
 	
 	/**
-	 * run the user interface
+	 * run the interface in console
+	 *
+	 * @param machine
+	 * 		insert coin in Coin machine
 	 */
 	public void insertDialog(CoinMachine machine) {
 		System.out.println("Coin Machine has a capacity of " + machine.getCapacity());
@@ -64,16 +67,16 @@ public class Demo {
 	 * 		not used
 	 */
 	public static void main(String[] args) {
-		final int capacity = 10;  // how many coins the machine can hold
+		final int capacity = 20;  // how many coins the machine can hold
 		
 		CoinMachine machine = new CoinMachine(capacity);
 
-		Demo demo = new Demo();
+		Main main = new Main();
 
 		// add observers
-		machine.addObserver(new ObserverWindow());
+		machine.addObserver(new ObserverWindow(machine));
 
-		demo.insertDialog(machine);
+		main.insertDialog(machine);
 	}
 }
 

@@ -1,11 +1,3 @@
-/bin
-*.class
-
-# eclipse project files
-.project
-.classpath
-.settings/
-.checkstyle
-
 .idea/
 out/
+*.iml
