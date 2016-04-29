@@ -4,17 +4,27 @@ import Constant.Status;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class CoinWindow extends JDialog {
 	private JPanel contentPane;
 	private JTextField textField1;
 	private JLabel status;
+	private JButton exitButton;
 
 	public CoinWindow() {
 		setContentPane(contentPane);
 		// set up
 		textField1.setEnabled(false);
 		updateStatus(Status.REJECT);
+
+		exitButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
 	}
 
 	public void setTextField(String text) {

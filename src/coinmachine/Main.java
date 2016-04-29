@@ -1,6 +1,6 @@
 package coinmachine;
 
-import Observer.ObserverWindow;
+import Observer.ObserverObject;
 
 import java.util.Scanner;
 
@@ -74,7 +74,7 @@ public class Main {
 		Main main = new Main();
 
 		// add observers
-		machine.addObserver(new ObserverWindow(machine));
+		machine.addObserver(new ObserverObject(machine));
 
 		main.insertDialog(machine);
 	}

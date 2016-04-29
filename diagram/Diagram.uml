@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="644.0" y="561.0">GUI.InfoWindow</node>
+    <node x="929.0192307692307" y="1110.0">coinmachine.Main</node>
+    <node x="788.5" y="258.0">coinmachine.CoinMachine</node>
+    <node x="859.4102564102564" y="0.0">coinmachine.Coin</node>
+    <node x="0.0" y="616.5">GUI.HistoryWindow</node>
+    <node x="312.0" y="605.0">GUI.CoinWindow</node>
+    <node x="326.0" y="918.0">Observer.ObserverObject</node>
+    <node x="1214.0" y="0.0">Constant.Status</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="GUI.InfoWindow" target="coinmachine.CoinMachine">
+      <point x="98.0" y="-148.5" />
+      <point x="938.0" y="536.0" />
+      <point x="874.5" y="536.0" />
+      <point x="-86.0" y="126.5" />
+    </edge>
+    <edge source="coinmachine.Main" target="coinmachine.CoinMachine">
+      <point x="0.0" y="-59.5" />
+      <point x="1037.0192307692307" y="1085.0" />
+      <point x="1046.5" y="1085.0" />
+      <point x="86.0" y="126.5" />
+    </edge>
+    <edge source="Observer.ObserverObject" target="GUI.InfoWindow">
+      <point x="71.0" y="-71.0" />
+      <point x="539.0" y="888.0" />
+      <point x="742.0" y="888.0" />
+      <point x="-98.0" y="148.5" />
+    </edge>
+    <edge source="coinmachine.Main" target="Observer.ObserverObject">
+      <point x="-72.0" y="-59.5" />
+      <point x="965.0192307692307" y="1085.0" />
+      <point x="468.0" y="1085.0" />
+      <point x="0.0" y="71.0" />
+    </edge>
+    <edge source="Observer.ObserverObject" target="GUI.CoinWindow">
+      <point x="23.66666666666663" y="-71.0" />
+      <point x="491.66666666666663" y="878.0" />
+      <point x="546.0" y="878.0" />
+      <point x="78.0" y="104.5" />
+    </edge>
+    <edge source="Observer.ObserverObject" target="GUI.HistoryWindow">
+      <point x="-118.33333333333337" y="-71.0" />
+      <point x="349.66666666666663" y="898.0" />
+      <point x="73.0" y="898.0" />
+      <point x="-73.0" y="93.0" />
+    </edge>
+    <edge source="GUI.InfoWindow" target="coinmachine.Coin">
+      <point x="-98.0" y="-148.5" />
+      <point x="742.0" y="233.0" />
+      <point x="901.4102564102564" y="233.0" />
+      <point x="-84.0" y="104.0" />
+    </edge>
+    <edge source="coinmachine.CoinMachine" target="coinmachine.Coin">
+      <point x="0.0" y="-126.5" />
+      <point x="960.5" y="233.0" />
+      <point x="985.4102564102564" y="233.0" />
+      <point x="0.0" y="104.0" />
+    </edge>
+    <edge source="coinmachine.Main" target="coinmachine.Coin">
+      <point x="72.0" y="-59.5" />
+      <point x="1109.0192307692307" y="1085.0" />
+      <point x="1143.0" y="1085.0" />
+      <point x="1143.0" y="233.0" />
+      <point x="1069.4102564102564" y="233.0" />
+      <point x="84.0" y="104.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7013610888710968" x="671.5" y="614.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>Production</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -12,13 +12,13 @@ import java.util.*;
  * run 2 window of coin display and infomation of coin machine
  * Created by kamontat on 28/4/59.
  */
-public class ObserverWindow implements Observer {
+public class ObserverObject implements Observer {
 	private CoinWindow coinDialog;
 	private InfoWindow infoDialog;
 	private HistoryWindow historyDialog;
 
 	// constructor
-	public ObserverWindow(CoinMachine machine) {
+	public ObserverObject(CoinMachine machine) {
 		coinDialog = new CoinWindow();
 		infoDialog = new InfoWindow(machine);
 		historyDialog = new HistoryWindow();

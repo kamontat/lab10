@@ -91,6 +91,11 @@ public class CoinMachine extends Observable {
 		return String.format("Coin machine with capacity %d", capacity);
 	}
 
+	/**
+	 * return coin in machine with toString
+	 *
+	 * @return coin toString
+	 */
 	public String[] coinToString() {
 		String[] output = new String[coins.size()];
 		for (int i = 0; i < coins.size(); i++) {
