@@ -4,6 +4,7 @@ import coinmachine.Coin;
 import coinmachine.CoinMachine;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class InfoWindow extends JDialog {

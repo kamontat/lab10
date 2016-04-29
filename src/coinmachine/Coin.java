@@ -87,7 +87,7 @@ public class Coin implements Comparable<Coin> {
 	 */
 	@Override
 	public String toString() {
-		return value + "-" + currency;
+		return value + " " + currency + ".";
 	}
 
 	/**
